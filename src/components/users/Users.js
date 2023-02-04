@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import LoandingUsers from "../loading/loadingUsers";
+import { Link } from "react-router-dom";
 
 class Users extends Component {
   state = {
@@ -22,17 +23,17 @@ class Users extends Component {
             <LoandingUsers />
           ) : (
             <>
-              {this.state.users.map((user, index) => {
+              {this.state.users.map((user) => {
                 return (
-                  <div className="col-4 text-center p-5" key={index}>
+                  <div className="col-4 text-center p-5" key={user.id}>
                     <img
                       src={user.avatar}
                       style={{ borderRadius: "50%", width: "100px" }}
                       alt=""
                     />
-                    <h4>
+                    <Link to={`/users/${user.id}`}>
                       {user.first_name} {user.last_name}
-                    </h4>
+                    </Link>
                     <h5>{user.email}</h5>
                     <div className="row">
                       <div className="col-6">
