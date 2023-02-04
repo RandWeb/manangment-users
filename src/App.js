@@ -1,6 +1,9 @@
 import React, { Component } from "react";
-import { Route } from "react-router-dom";
+import { Route, Routes, Switch } from "react-router-dom";
+import Home from "./components/home/Home";
+import Login from "./components/login/login";
 import Navbar from "./components/navigation/Navbar";
+import Register from "./components/register/Register";
 import Users from "./components/users/Users";
 
 class App extends Component {
@@ -10,8 +13,12 @@ class App extends Component {
       <>
         <Navbar />
         <div className="container mt-3">
-          <Users />
-          <Route path='' Component=''/>
+          <Routes>
+            <Route path="/users/" element={<Users />} />
+            <Route path="/login/" element={<Login />} />
+            <Route path="/register/" element={<Register />} />
+            <Route path="/" element={<Home />} />
+          </Routes>
         </div>
       </>
     );
