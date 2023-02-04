@@ -3,6 +3,5 @@
     "javascript": "javascriptreact",
     "razor": "html",
     "plaintext": "pug"
-  },
-  "emmet.showSuggestionsAsSnippets": true
+  }
 }
