@@ -17,7 +17,7 @@ class App extends Component {
           <Routes>
             <Route path="/users/" element={<Users />} />
             <Route path="/users/:id" element={<User {...this.prop}/>} />
-            <Route path="/login/" element={<Login />} />
+            <Route path="/login/:timestamp?" component={Login} />
             <Route path="/register/" element={<Register />} />
             <Route path="/" element={<Home />} />
           </Routes>
