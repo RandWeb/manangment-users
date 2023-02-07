@@ -1,5 +1,5 @@
 import { Component } from "react";
-import { Link } from "react-router-dom";
+import {  NavLink } from "react-router-dom";
 
 class Navbar extends Component {
   state = {};
@@ -7,9 +7,9 @@ class Navbar extends Component {
     return (
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
-          <Link className="navbar-brand" to="/">
+          <NavLink className="navbar-brand" to="/">
             Home
-          </Link>
+          </NavLink>
           <button
             className="navbar-toggler"
             type="button"
@@ -24,23 +24,19 @@ class Navbar extends Component {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <Link
-                  className="nav-link active"
-                  aria-current="page"
-                  to="/Users"
-                >
+                <NavLink className="nav-link" aria-current="page" to="/Users">
                   Users
-                </Link>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/login">
+                <NavLink className="nav-link" to="/login">
                   login
-                </Link>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/register">
+                <NavLink className="nav-link" to="/register">
                   Register
-                </Link>
+                </NavLink>
               </li>
             </ul>
           </div>
